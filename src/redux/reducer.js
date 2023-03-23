@@ -19,6 +19,7 @@ const rootReducer = (state = initState, action) => {
       };
     case "filters/searchFilterChange":
       return {
+        ...state,
         filters: {
           ...state.filters,
           search: action.payload,
